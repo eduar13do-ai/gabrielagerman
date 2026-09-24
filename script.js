@@ -1,5 +1,5 @@
 /**
- * GABRIELA GERMAN - LUXURY LINK IN BIO INTERACTION SCRIPT
+ * GABRIELA GERMAN - LUXURY LINK IN BIO INTERACTION SCRIPT (LASH & MENTORIA)
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -150,10 +150,10 @@ const quizQuestions = [
     title: 'Qual é o seu objetivo principal agora?',
     desc: 'Selecione para entender sua real necessidade:',
     options: [
-      { text: 'Aprender Nail Design do Zero (Iniciante)', next: 1, category: 'curso_iniciante' },
-      { text: 'Aperfeiçoar minhas técnicas e cobrar mais caro', next: 1, category: 'especializacao' },
+      { text: 'Aprender Lash Design do Zero (Iniciante)', next: 1, category: 'curso_iniciante' },
+      { text: 'Aperfeiçoar minhas técnicas em Lash e cobrar mais', next: 1, category: 'especializacao' },
       { text: 'Acelerar faturamento e lotar agenda (Mentoria)', next: 1, category: 'mentoria' },
-      { text: 'Quero agendar um atendimento de luxo para minhas unhas', next: 2, category: 'cliente' }
+      { text: 'Quero agendar uma extensão de cílios de luxo', next: 2, category: 'cliente' }
     ]
   },
   {
@@ -250,22 +250,22 @@ function showQuizResult() {
 
   // Determine recommendation
   const lastChoice = userAnswers[userAnswers.length - 1];
-  let planName = 'Formação Presencial VIP Gabriela German';
-  let planDesc = 'O método definitivo para você dominar as técnicas mais desejadas e lucrativas com acompanhamento prático.';
-  let waMsg = 'Olá Gabriela! Fiz o quiz no seu link da bio e meu objetivo é: ' + (userAnswers[0]?.text || 'Crescer na carreira');
+  let planName = 'Formação Presencial Master Lash VIP';
+  let planDesc = 'O método prático definitivo para dominar mapeamento, isolamento, acoplamento perfeito e retenção de até 40 dias.';
+  let waMsg = 'Olá Gabriela! Fiz o quiz no seu link da bio e meu objetivo é: ' + (userAnswers[0]?.text || 'Crescer como Lash Designer');
 
   if (lastChoice?.result === 'mentoria_vip' || userAnswers[0]?.category === 'mentoria') {
-    planName = 'Mentoria VIP de Negócios & Alto Padrão';
-    planDesc = 'Aceleração estratégica 1 a 1 para elevar seu faturamento, ajustar seu posicionamento e dobrar seus preços com segurança.';
-    waMsg = 'Olá Gabriela! Fiz o teste no seu link da bio e tenho interesse em aplicar para a sua Mentoria VIP!';
+    planName = 'Mentoria VIP de Negócios & Alto Padrão em Lash';
+    planDesc = 'Aceleração estratégica 1 a 1 para elevar seu faturamento, ajustar seu posicionamento e lotar a agenda de clientes high-ticket.';
+    waMsg = 'Olá Gabriela! Fiz o teste no seu link da bio e tenho interesse em aplicar para a sua Mentoria VIP de Lash!';
   } else if (lastChoice?.result === 'atendimento_vip' || userAnswers[0]?.category === 'cliente') {
-    planName = 'Agendamento no Espaço Gabriela German';
-    planDesc = 'Alongamento estruturado, blindagem diamante ou manutenção em ambiente exclusivo com padrão premium.';
-    waMsg = 'Olá Gabriela! Gostaria de verificar os horários disponíveis para agendar meu procedimento no seu espaço!';
+    planName = 'Agendamento de Cílios no Espaço Gabriela German';
+    planDesc = 'Extensão Fio a Fio, Volume Russo, Efeito Sirena ou Lash Lifting com acabamento de excelência e conforto total.';
+    waMsg = 'Olá Gabriela! Gostaria de verificar os horários disponíveis para agendar minha aplicação de cílios no seu espaço!';
   } else if (lastChoice?.result === 'online') {
-    planName = 'Especializações & Masterclasses Online';
+    planName = 'Especializações & Masterclasses Online de Lash';
     planDesc = 'Acesso às técnicas de precisão com certificado, suporte a dúvidas e flexibilidade para estudar onde estiver.';
-    waMsg = 'Olá Gabriela! Gostaria de receber o link e detalhes dos seus cursos online com acesso imediato!';
+    waMsg = 'Olá Gabriela! Gostaria de receber o link e detalhes dos seus cursos online de Lash com acesso imediato!';
   }
 
   resultTitle.innerText = planName;
@@ -306,8 +306,8 @@ function initVideoPlayer() {
         if (caption) {
           caption.innerText =
             videoSrc.includes('sirena')
-              ? 'Demonstração detalhada do passo a passo do Efeito Sirena.'
-              : 'Mini Aula Técnica: acabamento perfeito e controle de produto.';
+              ? 'Demonstração detalhada do passo a passo do Efeito Sirena em Cílios.'
+              : 'Mini Aula Técnica: acoplamento perfeito e técnicas de precisão em Lash.';
         }
       }
     });
@@ -325,8 +325,8 @@ function initShareButton() {
     if (navigator.share) {
       try {
         await navigator.share({
-          title: 'Gabriela German | Nail Designer & Mentora',
-          text: 'Confira os cursos, atendimentos e mentorias exclusivas de Gabriela German.',
+          title: 'Gabriela German | Lash Designer & Mentora',
+          text: 'Confira os cursos presenciais, atendimentos de cílios e mentorias exclusivas de Gabriela German.',
           url: window.location.href
         });
       } catch (err) {
@@ -362,7 +362,7 @@ function showToast(message) {
 window.handleNotifySubmit = function() {
   const nameInput = document.getElementById('notify-name');
   const name = nameInput ? nameInput.value : '';
-  showToast(`🎉 Obrigada, ${name || 'Nail Designer'}! Você está na lista VIP.`);
+  showToast(`🎉 Obrigada, ${name || 'Lash Designer'}! Você está na lista VIP.`);
   
   const modal = document.getElementById('produtos-modal');
   if (modal) {
