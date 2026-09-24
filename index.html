@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Gabriela German | Nail Designer & Mentora</title>
+  <meta name="description" content="Página oficial de Gabriela German. Cursos presenciais, mentorias exclusivas e atendimentos de alto padrão em Nail Design.">
+  
+  <!-- Google Fonts: Cormorant Garamond & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Ambient Luxury Glow Background -->
+  <div class="ambient-glow top"></div>
+  <div class="ambient-glow center"></div>
+  <div class="ambient-glow bottom"></div>
+  
+  <!-- Background Sparkles Canvas -->
+  <canvas id="sparkles-canvas"></canvas>
+
+  <main class="page-wrapper">
+    
+    <!-- Top Action Bar (Share & Theme Accent) -->
+    <header class="top-nav">
+      <div class="status-badge">
+        <span class="status-dot"></span> Agenda Aberta 2026
+      </div>
+      <button class="icon-action-btn" id="share-btn" title="Compartilhar Link" aria-label="Compartilhar">
+        <i class="fa-solid fa-arrow-up-from-bracket"></i>
+      </button>
+    </header>
+
+    <!-- Profile Hero Section -->
+    <section class="profile-hero">
+      <div class="avatar-container">
+        <div class="avatar-ring-glow"></div>
+        <div class="avatar-border">
+          <img src="profile.jpg" alt="Gabriela German" class="avatar-img" id="profile-img">
+        </div>
+        <div class="verified-badge" title="Perfil Verificado">
+          <i class="fa-solid fa-check"></i>
+        </div>
+      </div>
+
+      <h1 class="expert-name">GABRIELA GERMAN</h1>
+      <p class="expert-tagline">Nail Designer & Mentora de Alto Padrão</p>
+
+      <p class="expert-bio">
+        Elevando o nível da sua carreira através de técnicas de excelência e posicionamento premium.
+      </p>
+
+      <!-- Social Media Quick Links -->
+      <nav class="social-links-row" aria-label="Redes Sociais">
+        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-pill" aria-label="Instagram">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" class="social-pill" aria-label="TikTok">
+          <i class="fa-brands fa-tiktok"></i>
+        </a>
+        <a href="https://wa.me/5500000000000?text=Ol%C3%A1%2C%20gostaria%20de%20informa%C3%A7%C3%B5es!" target="_blank" rel="noopener noreferrer" class="social-pill" aria-label="WhatsApp">
+          <i class="fa-brands fa-whatsapp"></i>
+        </a>
+        <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social-pill" aria-label="YouTube">
+          <i class="fa-brands fa-youtube"></i>
+        </a>
+      </nav>
+    </section>
+
+    <!-- Interactive Quiz / Discovery Banner (Highlighted Action) -->
+    <section class="cta-highlight-banner" id="quiz-trigger-btn">
+      <div class="banner-gold-line"></div>
+      <div class="banner-content">
+        <div class="banner-icon-box">
+          <i class="fa-solid fa-bolt-lightning"></i>
+        </div>
+        <div class="banner-text">
+          <span class="banner-badge">TESTE DE 1 MINUTO</span>
+          <h3>Como posso te ajudar hoje?</h3>
+          <p>Responda 3 perguntas e descubra o melhor caminho para o seu momento atual</p>
+        </div>
+        <div class="banner-arrow">
+          <i class="fa-solid fa-chevron-right"></i>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Links Section -->
+    <section class="links-container">
+
+      <!-- 1. Mentoria VIP Individual -->
+      <div class="link-card featured" id="mentoria-btn">
+        <div class="card-icon gold">
+          <i class="fa-solid fa-crown"></i>
+        </div>
+        <div class="card-info">
+          <h4>MENTORIA VIP & BUSINESS</h4>
+          <p>Acelere o faturamento e autoridade do seu estúdio com acompanhamento individual.</p>
+        </div>
+        <div class="card-action-icon">
+          <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </div>
+      </div>
+
+      <!-- 2. Cursos & Especializações -->
+      <div class="link-card" id="cursos-btn">
+        <div class="card-icon rose-gold">
+          <i class="fa-solid fa-graduation-cap"></i>
+        </div>
+        <div class="card-info">
+          <h4>CURSOS & FORMAÇÕES</h4>
+          <p>Cursos presenciais VIP e especializações técnicas do zero ao avançado.</p>
+        </div>
+        <div class="card-action-icon">
+          <i class="fa-solid fa-chevron-right"></i>
+        </div>
+      </div>
+
+      <!-- 3. Atendimentos de Luxo -->
+      <div class="link-card" id="atendimentos-btn">
+        <div class="card-icon emerald">
+          <i class="fa-brands fa-whatsapp"></i>
+        </div>
+        <div class="card-info">
+          <h4>AGENDAMENTO DE ATENDIMENTOS</h4>
+          <p>Alongamento em Gel, Blindagem Diamante, Esmaltação e Manutenção de Luxo.</p>
+        </div>
+        <div class="card-action-icon">
+          <i class="fa-solid fa-chevron-right"></i>
+        </div>
+      </div>
+
+      <!-- 4. Mini Aulas Gratuitas (Vídeos) -->
+      <div class="link-card" id="video-aulas-btn">
+        <div class="card-icon ruby">
+          <i class="fa-solid fa-circle-play"></i>
+        </div>
+        <div class="card-info">
+          <div class="tag-row">
+            <h4>MINI AULAS EXCLUSIVAS</h4>
+            <span class="micro-badge">GRÁTIS</span>
+          </div>
+          <p>Assista agora: Efeito Sirena e Técnicas de Precisão em Nail Art.</p>
+        </div>
+        <div class="card-action-icon">
+          <i class="fa-solid fa-play"></i>
+        </div>
+      </div>
+
+      <!-- Category Label: Produtos & Lançamentos -->
+      <div class="section-label">
+        <i class="fa-solid fa-caret-right"></i> MEUS PRODUTOS & MATERIAIS
+      </div>
+
+      <!-- 5. E-books / Produtos em Breve -->
+      <div class="link-card locked" id="produtos-btn">
+        <div class="card-icon locked-icon">
+          <i class="fa-solid fa-lock"></i>
+        </div>
+        <div class="card-info">
+          <span class="locked-title">EM BREVE</span>
+          <p>Novos lançamentos, e-books e produtos exclusivos sendo preparados com carinho.</p>
+        </div>
+        <div class="card-action-icon">
+          <span class="notify-pill">Avisar-me</span>
+        </div>
+      </div>
+
+      <!-- 6. Localização do Espaço VIP -->
+      <div class="link-card studio-card" id="studio-btn">
+        <div class="card-icon gold">
+          <i class="fa-solid fa-location-dot"></i>
+        </div>
+        <div class="card-info">
+          <h4>ESPAÇO GABRIELA GERMAN</h4>
+          <p>Ambiente sofisticado com estacionamento e atendimento com hora marcada.</p>
+        </div>
+        <div class="card-action-icon">
+          <i class="fa-solid fa-map-pin"></i>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- Authority / Proof Counter Stats -->
+    <section class="proof-stats">
+      <div class="stat-item">
+        <span class="stat-number">+1.500</span>
+        <span class="stat-label">Alunas Formadas</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <span class="stat-number">8 Anos</span>
+        <span class="stat-label">de Experiência</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <span class="stat-number">100%</span>
+        <span class="stat-label">Satisfação VIP</span>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="page-footer">
+      <p class="copyright">© 2026 Gabriela German. Todos os direitos reservados.</p>
+      <p class="made-by">Design Luxury Experience</p>
+    </footer>
+
+  </main>
+
+  <!-- ==================== MODALS ==================== -->
+
+  <!-- Modal 1: Interactive Quiz / Diagnóstico -->
+  <div class="modal-overlay" id="quiz-modal" aria-hidden="true">
+    <div class="modal-sheet quiz-sheet">
+      <button class="modal-close-btn" id="close-quiz-btn" aria-label="Fechar">&times;</button>
+      
+      <div class="quiz-header">
+        <span class="quiz-step-tag" id="quiz-step-indicator">Pergunta 1 de 3</span>
+        <h3 class="quiz-title" id="quiz-step-title">Qual é o seu objetivo principal hoje?</h3>
+        <p class="quiz-subtitle" id="quiz-step-desc">Selecione uma das opções abaixo para continuarmos:</p>
+      </div>
+
+      <div class="quiz-progress-track">
+        <div class="quiz-progress-bar" id="quiz-progress-bar"></div>
+      </div>
+
+      <div class="quiz-options-container" id="quiz-options-container">
+        <!-- Injected via JS -->
+      </div>
+
+      <!-- Quiz Final Result Container (Hidden initially) -->
+      <div class="quiz-result-container" id="quiz-result-container" style="display: none;">
+        <div class="result-badge-icon">
+          <i class="fa-solid fa-sparkles"></i>
+        </div>
+        <h3 id="result-title">Recomendação Personalizada!</h3>
+        <p id="result-text" class="result-desc"></p>
+        
+        <div class="result-box" id="result-box">
+          <!-- Recommendation details -->
+        </div>
+
+        <a href="#" id="result-whatsapp-btn" target="_blank" class="luxury-btn primary-gold">
+          <i class="fa-brands fa-whatsapp"></i> Conversar com Gabriela German
+        </a>
+        <button type="button" class="luxury-btn outline" id="restart-quiz-btn">Refazer Diagnóstico</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 2: Cursos e Formações -->
+  <div class="modal-overlay" id="cursos-modal" aria-hidden="true">
+    <div class="modal-sheet">
+      <button class="modal-close-btn" id="close-cursos-btn" aria-label="Fechar">&times;</button>
+      
+      <div class="modal-header-centered">
+        <div class="modal-icon-badge">
+          <i class="fa-solid fa-graduation-cap"></i>
+        </div>
+        <h3>Cursos & Especializações</h3>
+        <p>Aprenda técnicas de alta precisão, acabamento perfeito e fidelização de clientes de alto padrão.</p>
+      </div>
+
+      <div class="items-list">
+        <!-- Curso 1 -->
+        <div class="item-detail-card">
+          <div class="item-head">
+            <span class="pill-gold">PRESENCIAL VIP</span>
+            <span class="item-price">Vagas Limitadas</span>
+          </div>
+          <h4>Formação Master Nail Designer (Do Zero ao Avançado)</h4>
+          <p>Treinamento individual ou turma reduzida. Domine anatomia da unha, controle de produto, lixamento técnico e biossegurança completa.</p>
+          <a href="https://wa.me/5500000000000?text=Ol%C3%A1%20Gabriela!%20Gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20o%20Curso%20Presencial%20Master%20Nail%20Designer." target="_blank" class="action-link-btn">
+            <i class="fa-brands fa-whatsapp"></i> Solicitar Grade e Valores
+          </a>
+        </div>
+
+        <!-- Curso 2 -->
+        <div class="item-detail-card">
+          <div class="item-head">
+            <span class="pill-gold">ESPECIALIZAÇÃO</span>
+            <span class="item-price">Inscrições Abertas</span>
+          </div>
+          <h4>Aperfeiçoamento em Molde F1 & Estruturas Europeias</h4>
+          <p>Agilidade em mesa e acabamento perfeito em menos de 1h30. Técnicas de simetria e curvatura natural.</p>
+          <a href="https://wa.me/5500000000000?text=Ol%C3%A1%20Gabriela!%20Gostaria%20de%20saber%20mais%20sobre%20o%20Aperfei%C3%A7oamento%20em%20Molde%20F1." target="_blank" class="action-link-btn">
+            <i class="fa-brands fa-whatsapp"></i> Quero Me Especializar
+          </a>
+        </div>
+
+        <!-- Curso 3 -->
+        <div class="item-detail-card">
+          <div class="item-head">
+            <span class="pill-gold">ONLINE</span>
+            <span class="item-price">Acesso Imediato</span>
+          </div>
+          <h4>Masterclass Blindagem Diamante & Esmaltação em Gel</h4>
+          <p>Aprenda o segredo para a esmaltação perfeita rente à cutícula sem encostar e com durabilidade de até 30 dias.</p>
+          <a href="https://wa.me/5500000000000?text=Ol%C3%A1%20Gabriela!%20Gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20a%20Masterclass%20Online." target="_blank" class="action-link-btn">
+            <i class="fa-brands fa-whatsapp"></i> Garantir Minha Vaga Online
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 3: Mentoria VIP -->
+  <div class="modal-overlay" id="mentoria-modal" aria-hidden="true">
+    <div class="modal-sheet">
+      <button class="modal-close-btn" id="close-mentoria-btn" aria-label="Fechar">&times;</button>
+      
+      <div class="modal-header-centered">
+        <div class="modal-icon-badge gold-glow">
+          <i class="fa-solid fa-crown"></i>
+        </div>
+        <h3>Mentoria Individual Gabriela German</h3>
+        <p>Um programa exclusivo de aceleração para Nail Designers que desejam faturar mais de R$ 10k/mês e lotar a agenda com clientes que valorizam o seu trabalho.</p>
+      </div>
+
+      <div class="mentoria-features-grid">
+        <div class="feature-box">
+          <i class="fa-solid fa-chart-line"></i>
+          <div>
+            <h5>Posicionamento High-Ticket</h5>
+            <p>Aprenda a precificar com segurança e atrair clientes de maior poder aquisitivo.</p>
+          </div>
+        </div>
+        <div class="feature-box">
+          <i class="fa-solid fa-wand-magic-sparkles"></i>
+          <div>
+            <h5>Refinamento Técnico de Alto Nível</h5>
+            <p>Análise cirúrgica da sua aplicação para alcançar acabamento de capa de revista.</p>
+          </div>
+        </div>
+        <div class="feature-box">
+          <i class="fa-solid fa-bullseye"></i>
+          <div>
+            <h5>Estratégia de Captação e Vendas</h5>
+            <p>Transforme seu Instagram em uma máquina automática de atração de clientes e alunas.</p>
+          </div>
+        </div>
+      </div>
+
+      <a href="https://wa.me/5500000000000?text=Ol%C3%A1%20Gabriela!%20Gostaria%20de%20candidatar-me%20%C3%A0%20Mentoria%20Individual%20VIP." target="_blank" class="luxury-btn primary-gold">
+        <i class="fa-brands fa-whatsapp"></i> Aplicar para a Mentoria VIP
+      </a>
+    </div>
+  </div>
+
+  <!-- Modal 4: Atendimentos e Procedimentos -->
+  <div class="modal-overlay" id="atendimentos-modal" aria-hidden="true">
+    <div class="modal-sheet">
+      <button class="modal-close-btn" id="close-atendimentos-btn" aria-label="Fechar">&times;</button>
+      
+      <div class="modal-header-centered">
+        <div class="modal-icon-badge">
+          <i class="fa-solid fa-gem"></i>
+        </div>
+        <h3>Menu de Atendimentos Exclusivos</h3>
+        <p>Viva uma experiência de cuidado, elegância e durabilidade inigualável para suas unhas.</p>
+      </div>
+
+      <div class="service-list">
+        <div class="service-item">
+          <div class="service-meta">
+            <h5>Alongamento em Gel Estruturado</h5>
+            <p>Extensão com curvatura perfeita, naturalidade extrema e alta resistência.</p>
+          </div>
+          <a href="https://wa.me/5500000000000?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20um%20Alongamento%20em%20Gel!" target="_blank" class="service-btn">Agendar</a>
+        </div>
+
+        <div class="service-item">
+          <div class="service-meta">
+            <h5>Blindagem Diamante com Esmaltação em Gel</h5>
+            <p>Proteção da unha natural com brilho espelhado que não descasca por até 25 dias.</p>
+          </div>
+          <a href="https://wa.me/5500000000000?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20Blindagem%20Diamante!" target="_blank" class="service-btn">Agendar</a>
+        </div>
+
+        <div class="service-item">
+          <div class="service-meta">
+            <h5>Manutenção e Reconstrução</h5>
+            <p>Rebalanceamento de estrutura, simetria e renovação completa do design.</p>
+          </div>
+          <a href="https://wa.me/5500000000000?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20minha%20Manuten%C3%A7%C3%A3o!" target="_blank" class="service-btn">Agendar</a>
+        </div>
+
+        <div class="service-item">
+          <div class="service-meta">
+            <h5>Nail Art & Efeitos Especiais</h5>
+            <p>Efeito Sirena, degradê Babyboomer, Francesa reversa e encapsulados finos.</p>
+          </div>
+          <a href="https://wa.me/5500000000000?text=Ol%C3%A1%2C%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20Nail%20Arts%20e%20Efeitos!" target="_blank" class="service-btn">Agendar</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 5: Mini Aulas em Vídeo -->
+  <div class="modal-overlay" id="video-modal" aria-hidden="true">
+    <div class="modal-sheet video-sheet">
+      <button class="modal-close-btn" id="close-video-btn" aria-label="Fechar">&times;</button>
+      
+      <div class="modal-header-centered">
+        <div class="modal-icon-badge">
+          <i class="fa-solid fa-play"></i>
+        </div>
+        <h3>Mini Aulas e Bastidores</h3>
+        <p>Assista na prática demonstrações de aplicação e efeitos exclusivos.</p>
+      </div>
+
+      <div class="video-tabs">
+        <button class="video-tab-btn active" data-video="mini aula efeito sirena.mp4">Efeito Sirena</button>
+        <button class="video-tab-btn" data-video="mini aula.mp4">Mini Aula Técnica</button>
+      </div>
+
+      <div class="video-player-wrapper">
+        <video id="active-video-player" controls preload="metadata" playsinline>
+          <source src="mini aula efeito sirena.mp4" type="video/mp4">
+          Seu navegador não suporta a tag de vídeo.
+        </video>
+      </div>
+      <p class="video-caption" id="video-caption-text">Demonstração detalhada do passo a passo do Efeito Sirena.</p>
+    </div>
+  </div>
+
+  <!-- Modal 6: Notificação de Produtos / Em Breve -->
+  <div class="modal-overlay" id="produtos-modal" aria-hidden="true">
+    <div class="modal-sheet">
+      <button class="modal-close-btn" id="close-produtos-btn" aria-label="Fechar">&times;</button>
+      
+      <div class="modal-header-centered">
+        <div class="modal-icon-badge">
+          <i class="fa-solid fa-bell"></i>
+        </div>
+        <h3>Lista VIP de Lançamentos</h3>
+        <p>Receba em primeira mão acesso a novos guias técnicos, e-books e produtos selecionados com condições exclusivas.</p>
+      </div>
+
+      <form id="notify-form" class="notify-form" onsubmit="event.preventDefault(); window.handleNotifySubmit();">
+        <div class="input-group">
+          <label for="notify-name">Seu Nome</label>
+          <input type="text" id="notify-name" placeholder="Ex: Maria Silva" required>
+        </div>
+        <div class="input-group">
+          <label for="notify-whatsapp">Seu WhatsApp</label>
+          <input type="tel" id="notify-whatsapp" placeholder="(00) 00000-0000" required>
+        </div>
+        <button type="submit" class="luxury-btn primary-gold">Entrar na Lista VIP</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Floating Quick WhatsApp Button -->
+  <a href="https://wa.me/5500000000000?text=Ol%C3%A1%20Gabriela!%20Vim%20pelo%20Link%20na%20Bio%20e%20gostaria%20de%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener noreferrer" class="floating-whatsapp-fab" title="Falar no WhatsApp" aria-label="WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+    <span class="fab-pulse"></span>
+  </a>
+
+  <!-- Toast Notification -->
+  <div id="toast-message" class="toast-message"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
